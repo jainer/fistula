@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendaciones Postoperatorias - Fístulas Perianales</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Cuidado Postoperatorio - Fístulas Perianales</span>
+    </div>
+  </nav>
+  <div class="container">
+    <!-- Bienvenida -->
+    <div class="alert alert-info" role="alert">
+      <h4 class="alert-heading">¡Bienvenido!</h4>
+      <p>Esta aplicación te brinda recomendaciones efectivas para tu recuperación tras la cirugía de fístula perianal. Sigue estos consejos para favorecer tu bienestar.</p>
+    </div>
+    <!-- Recomendaciones -->
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <i class="bi bi-heart-pulse"></i> Recomendaciones Generales
+      </div>
+      <div class="card-body">
+        <h5>Higiene y cuidado de la herida</h5>
+        <ul>
+          <li>Lava la zona con agua tibia y jabón neutro después de cada evacuación.</li>
+          <li>Seca suavemente, sin frotar.</li>
+          <li>Evita el uso de productos irritantes o perfumados.</li>
+        </ul>
+        <h5>Dieta y hábitos saludables</h5>
+        <ul>
+          <li>Consume alimentos ricos en fibra (frutas, verduras, cereales integrales).</li>
+          <li>Bebe abundante agua (1.5-2 litros al día).</li>
+          <li>Evita comidas picantes, grasas y alcohol.</li>
+        </ul>
+        <h5>Actividad física</h5>
+        <ul>
+          <li>Evita esfuerzos físicos intensos durante la primera semana.</li>
+          <li>Puedes caminar y moverte suavemente.</li>
+          <li>No permanezcas sentado por periodos prolongados.</li>
+        </ul>
+        <h5>Signos de alarma</h5>
+        <ul>
+          <li>Fiebre mayor a 38°C.</li>
+          <li>Dolor intenso o que no mejora.</li>
+          <li>Sangrado abundante.</li>
+          <li>Supuración con mal olor.</li>
+          <li>Enrojecimiento o hinchazón excesiva.</li>
+        </ul>
+        <p class="text-danger"><i class="bi bi-exclamation-triangle-fill"></i> Si presentas alguno de estos síntomas, contacta a tu médico de inmediato.</p>
+        <h5>Recomendaciones detalladas día a día (Primera semana)</h5>
+        <div class="table-responsive mb-3">
+          <table class="table table-bordered align-middle" id="tabla-dias">
+            <thead class="table-light">
+              <tr>
+                <th></th>
+                <th>Día</th>
+                <th>Higiene</th>
+                <th>Dieta</th>
+                <th>Actividad</th>
+                <th>Observaciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 1</strong></td>
+                <td>
+                  - Si hay apósito, cámbialo solo si está muy húmedo.<br>
+                  - Lava la zona solo si es necesario, con agua tibia y jabón neutro (sin perfume).<br>
+                  - Seca con gasa estéril, dando toques suaves.<br>
+                  - No uses esponjas ni papel higiénico áspero.<br>
+                  - Evita baños de asiento el primer día.
+                </td>
+                <td>
+                  - Dieta líquida o blanda: caldos, gelatina, puré de papa, compota de manzana.<br>
+                  - Bebe agua en pequeños sorbos durante el día.<br>
+                  - Evita lácteos, frituras y picantes.<br>
+                  - No tomes alcohol ni bebidas gaseosas.
+                </td>
+                <td>
+                  - Reposo en cama o sillón, cambia de posición cada 2 horas.<br>
+                  - Levántate solo para ir al baño.<br>
+                  - No permanezcas sentado más de 15 minutos seguidos.<br>
+                  - Usa una almohada blanda si necesitas sentarte.
+                </td>
+                <td>
+                  - Es normal sentir molestias leves y algo de sangrado.<br>
+                  - Si tienes fiebre o dolor intenso, avisa a tu médico.<br>
+                  - Observa el color y olor de la herida si cambias el apósito.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 2</strong></td>
+                <td>
+                  - Lava la zona después de cada evacuación con agua tibia y jabón neutro.<br>
+                  - Seca con gasa estéril, sin frotar.<br>
+                  - Puedes realizar un baño de asiento corto (5-10 min) con agua tibia si tu médico lo permite.<br>
+                  - Cambia el apósito si está húmedo o sucio.
+                </td>
+                <td>
+                  - Introduce alimentos ricos en fibra: papilla de avena, plátano maduro, zanahoria cocida.<br>
+                  - Bebe al menos 1.5 litros de agua.<br>
+                  - Evita café, chocolate y alimentos muy condimentados.<br>
+                  - Desayuno sugerido: papilla de avena y manzana cocida.
+                </td>
+                <td>
+                  - Camina dentro de casa por periodos cortos.<br>
+                  - Evita agacharte o levantar peso.<br>
+                  - Siéntate en superficies blandas y por poco tiempo.<br>
+                  - Haz ejercicios de respiración profunda.
+                </td>
+                <td>
+                  - Observa si hay enrojecimiento, hinchazón o secreción.<br>
+                  - El dolor debe ser tolerable y disminuir con analgésicos.<br>
+                  - Si hay sangrado abundante, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 3</strong></td>
+                <td>
+                  - Mantén la higiene tras cada evacuación.<br>
+                  - Realiza baño de asiento 1-2 veces al día si no hay contraindicación.<br>
+                  - Usa ropa interior de algodón limpia.<br>
+                  - Cambia apósitos según indicación médica.
+                </td>
+                <td>
+                  - Alimentos blandos y ricos en fibra: arroz integral, calabaza, pera cocida.<br>
+                  - Bebe agua y evita refrescos.<br>
+                  - Almuerzo sugerido: arroz integral, pollo cocido y zanahoria.<br>
+                  - Evita alimentos que estriñan (pan blanco, arroz blanco).
+                </td>
+                <td>
+                  - Camina suavemente por la casa.<br>
+                  - No hagas esfuerzos ni deportes.<br>
+                  - Puedes ducharte normalmente, evitando frotar la herida.<br>
+                  - Descansa con las piernas ligeramente elevadas.
+                </td>
+                <td>
+                  - El dolor debe ir disminuyendo.<br>
+                  - Observa si hay secreción con mal olor.<br>
+                  - Si tienes fiebre, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 4</strong></td>
+                <td>
+                  - Continúa higiene tras cada evacuación y baño de asiento.<br>
+                  - Seca bien la zona.<br>
+                  - Cambia apósitos si están húmedos.<br>
+                  - No uses talcos ni cremas sin indicación médica.
+                </td>
+                <td>
+                  - Dieta normal rica en fibra: ensalada de frutas, yogur descremado, pan integral.<br>
+                  - Bebe agua y jugos naturales.<br>
+                  - Cena sugerida: sopa de verduras y pan integral.<br>
+                  - Evita embutidos y frituras.
+                </td>
+                <td>
+                  - Puedes salir a caminar distancias cortas.<br>
+                  - Evita subir escaleras o cargar objetos pesados.<br>
+                  - Haz pausas frecuentes si te sientas.<br>
+                  - Mantén una postura erguida.
+                </td>
+                <td>
+                  - Si hay fiebre, dolor que aumenta o secreción purulenta, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 5</strong></td>
+                <td>
+                  - Mantén higiene y baños de asiento.<br>
+                  - Cambia apósitos según necesidad.<br>
+                  - Usa ropa cómoda y holgada.<br>
+                  - No uses papel higiénico seco, prefiere toallitas húmedas sin alcohol.
+                </td>
+                <td>
+                  - Continúa con dieta saludable: legumbres, frutas frescas, pescado al vapor.<br>
+                  - Bebe agua y evita bebidas azucaradas.<br>
+                  - Desayuno sugerido: yogur con frutas y semillas.<br>
+                  - Evita comidas rápidas.
+                </td>
+                <td>
+                  - Retoma actividades cotidianas leves.<br>
+                  - No realices ejercicio intenso.<br>
+                  - Si trabajas sentado, haz pausas cada 30 minutos.<br>
+                  - Puedes hacer estiramientos suaves.
+                </td>
+                <td>
+                  - El dolor debe ser leve.<br>
+                  - Si hay sangrado nuevo o abundante, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 6</strong></td>
+                <td>
+                  - Higiene diaria y tras evacuación.<br>
+                  - Baños de asiento si ayudan a aliviar molestias.<br>
+                  - Cambia apósitos si es necesario.<br>
+                  - Mantén la zona seca y limpia.
+                </td>
+                <td>
+                  - Alimentos ricos en fibra: lentejas, espinaca, frutas con cáscara.<br>
+                  - Bebe agua y té sin azúcar.<br>
+                  - Almuerzo sugerido: lentejas guisadas y ensalada.<br>
+                  - Evita dulces y bollería.
+                </td>
+                <td>
+                  - Puedes aumentar la actividad si te sientes bien.<br>
+                  - Camina al aire libre.<br>
+                  - Evita deportes de contacto.<br>
+                  - Mantén una rutina de descanso adecuada.
+                </td>
+                <td>
+                  - Vigila signos de alarma: fiebre, dolor intenso, secreción.<br>
+                  - El área debe verse menos inflamada.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 7</strong></td>
+                <td>
+                  - Continúa higiene y cuidados.<br>
+                  - Puedes reducir la frecuencia de baños de asiento si no hay molestias.<br>
+                  - Cambia apósitos solo si es necesario.<br>
+                  - Mantén la zona seca.
+                </td>
+                <td>
+                  - Dieta normal saludable: arroz integral, pollo, verduras, frutas.<br>
+                  - Bebe agua suficiente.<br>
+                  - Cena sugerida: pescado al vapor y ensalada.<br>
+                  - Evita comidas pesadas por la noche.
+                </td>
+                <td>
+                  - Actividad normal, evitando esfuerzos intensos.<br>
+                  - Puedes retomar actividades habituales si no hay molestias.<br>
+                  - Si trabajas, consulta a tu médico sobre el regreso.<br>
+                  - Mantén pausas activas si permaneces sentado.
+                </td>
+                <td>
+                  - Si todo va bien, programa control con tu médico.<br>
+                  - Si hay síntomas nuevos, consulta de inmediato.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 8</strong></td>
+                <td>
+                  - Lava la zona tras cada evacuación y al menos una vez más al día.<br>
+                  - Baños de asiento si hay molestias.<br>
+                  - Cambia apósitos si hay secreción.<br>
+                  - Usa ropa interior de algodón limpia.
+                </td>
+                <td>
+                  - Dieta normal rica en fibra: frutas frescas, verduras, cereales integrales.<br>
+                  - Bebe al menos 2 litros de agua.<br>
+                  - Desayuno sugerido: pan integral, queso fresco, fruta.<br>
+                  - Evita alimentos ultraprocesados.
+                </td>
+                <td>
+                  - Camina diariamente al aire libre.<br>
+                  - Puedes subir escaleras lentamente.<br>
+                  - Evita cargar peso o deportes.<br>
+                  - Si trabajas sentado, haz pausas cada 30 minutos.
+                </td>
+                <td>
+                  - El dolor debe ser mínimo.<br>
+                  - Observa si hay secreción persistente o mal olor.<br>
+                  - Si hay fiebre, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 9</strong></td>
+                <td>
+                  - Mantén higiene tras cada evacuación.<br>
+                  - Baños de asiento si hay incomodidad.<br>
+                  - Cambia apósitos solo si es necesario.<br>
+                  - Seca bien la zona antes de vestirte.
+                </td>
+                <td>
+                  - Incluye ensaladas frescas y proteínas magras.<br>
+                  - Bebe agua y evita refrescos.<br>
+                  - Almuerzo sugerido: pechuga de pollo, ensalada de espinaca y tomate.<br>
+                  - Evita picantes y frituras.
+                </td>
+                <td>
+                  - Puedes caminar distancias más largas.<br>
+                  - Realiza estiramientos suaves.<br>
+                  - Evita actividades de alto impacto.<br>
+                  - Descansa si sientes fatiga.
+                </td>
+                <td>
+                  - La herida debe lucir menos inflamada.<br>
+                  - Si hay dolor nuevo o secreción, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 10</strong></td>
+                <td>
+                  - Continúa higiene y baños de asiento si es necesario.<br>
+                  - Cambia apósitos si hay secreción.<br>
+                  - Usa ropa cómoda y holgada.<br>
+                  - No uses cremas sin indicación médica.
+                </td>
+                <td>
+                  - Dieta variada: arroz integral, pescado, verduras al vapor.<br>
+                  - Bebe agua y jugos naturales.<br>
+                  - Cena sugerida: pescado al vapor y puré de calabaza.<br>
+                  - Evita comidas pesadas por la noche.
+                </td>
+                <td>
+                  - Puedes retomar actividades habituales si no hay molestias.<br>
+                  - Evita deportes y esfuerzos intensos.<br>
+                  - Haz pausas activas si trabajas sentado.<br>
+                  - Mantén una rutina de descanso adecuada.
+                </td>
+                <td>
+                  - El área debe estar menos sensible.<br>
+                  - Si hay enrojecimiento o secreción, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 11</strong></td>
+                <td>
+                  - Mantén higiene tras cada evacuación.<br>
+                  - Baños de asiento si hay molestias.<br>
+                  - Cambia apósitos solo si es necesario.<br>
+                  - Seca bien la zona antes de vestirte.
+                </td>
+                <td>
+                  - Incluye frutas con cáscara y semillas.<br>
+                  - Bebe agua suficiente.<br>
+                  - Desayuno sugerido: yogur natural con semillas y fruta.<br>
+                  - Evita alimentos que estriñan.
+                </td>
+                <td>
+                  - Camina diariamente y aumenta la distancia si te sientes bien.<br>
+                  - Realiza ejercicios de respiración y estiramientos.<br>
+                  - Evita cargar peso.<br>
+                  - Descansa si hay molestias.
+                </td>
+                <td>
+                  - La herida debe estar cicatrizando.<br>
+                  - Si hay dolor persistente, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 12</strong></td>
+                <td>
+                  - Continúa higiene y baños de asiento si hay molestias.<br>
+                  - Cambia apósitos si hay secreción.<br>
+                  - Usa ropa interior limpia y cómoda.<br>
+                  - No uses productos perfumados.
+                </td>
+                <td>
+                  - Dieta normal rica en fibra y proteínas.<br>
+                  - Bebe agua y evita bebidas azucaradas.<br>
+                  - Almuerzo sugerido: ensalada de legumbres y pollo.<br>
+                  - Evita comidas rápidas.
+                </td>
+                <td>
+                  - Puedes retomar actividades cotidianas.<br>
+                  - Evita deportes de contacto.<br>
+                  - Haz pausas activas si permaneces sentado.<br>
+                  - Mantén una rutina de descanso adecuada.
+                </td>
+                <td>
+                  - El dolor debe ser mínimo o ausente.<br>
+                  - Si hay secreción o sangrado, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 13</strong></td>
+                <td>
+                  - Mantén higiene tras cada evacuación.<br>
+                  - Baños de asiento si hay molestias.<br>
+                  - Cambia apósitos solo si es necesario.<br>
+                  - Seca bien la zona antes de vestirte.
+                </td>
+                <td>
+                  - Incluye cereales integrales y frutas frescas.<br>
+                  - Bebe agua suficiente.<br>
+                  - Desayuno sugerido: pan integral, queso fresco, fruta.<br>
+                  - Evita alimentos ultraprocesados.
+                </td>
+                <td>
+                  - Camina diariamente y aumenta la distancia si te sientes bien.<br>
+                  - Realiza ejercicios de respiración y estiramientos.<br>
+                  - Evita cargar peso.<br>
+                  - Descansa si hay molestias.
+                </td>
+                <td>
+                  - La herida debe estar casi cicatrizada.<br>
+                  - Si hay dolor persistente, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 14</strong></td>
+                <td>
+                  - Continúa higiene y baños de asiento si hay molestias.<br>
+                  - Cambia apósitos si hay secreción.<br>
+                  - Usa ropa interior limpia y cómoda.<br>
+                  - No uses productos perfumados.
+                </td>
+                <td>
+                  - Dieta normal rica en fibra y proteínas.<br>
+                  - Bebe agua y evita bebidas azucaradas.<br>
+                  - Almuerzo sugerido: ensalada de legumbres y pollo.<br>
+                  - Evita comidas rápidas.
+                </td>
+                <td>
+                  - Puedes retomar actividades cotidianas.<br>
+                  - Evita deportes de contacto.<br>
+                  - Haz pausas activas si permaneces sentado.<br>
+                  - Mantén una rutina de descanso adecuada.
+                </td>
+                <td>
+                  - El dolor debe ser mínimo o ausente.<br>
+                  - Si hay secreción o sangrado, consulta.
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input" onchange="resaltarFila(this)"></td>
+                <td><strong>Día 15</strong></td>
+                <td>
+                  - Mantén higiene tras cada evacuación.<br>
+                  - Puedes suspender baños de asiento si no hay molestias.<br>
+                  - Cambia apósitos solo si es necesario.<br>
+                  - Seca bien la zona antes de vestirte.
+                </td>
+                <td>
+                  - Dieta normal saludable: frutas, verduras, proteínas magras.<br>
+                  - Bebe agua suficiente.<br>
+                  - Cena sugerida: pescado al vapor y ensalada.<br>
+                  - Evita comidas pesadas por la noche.
+                </td>
+                <td>
+                  - Actividad normal, evitando esfuerzos intensos.<br>
+                  - Puedes retomar actividades habituales si no hay molestias.<br>
+                  - Si trabajas, consulta a tu médico sobre el regreso.<br>
+                  - Mantén pausas activas si permaneces sentado.
+                </td>
+                <td>
+                  - Si todo va bien, programa control con tu médico.<br>
+                  - Si hay síntomas nuevos, consulta de inmediato.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Preguntas frecuentes -->
+    <div class="card mb-4">
+      <div class="card-header bg-secondary text-white">
+        <i class="bi bi-question-circle"></i> Preguntas Frecuentes
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><strong>¿Cuánto tiempo dura la recuperación?</strong> Generalmente entre 2 y 4 semanas, dependiendo de cada caso.</li>
+          <li><strong>¿Puedo bañarme normalmente?</strong> Sí, se recomienda la higiene diaria con agua y jabón neutro.</li>
+          <li><strong>¿Cuándo puedo volver a trabajar?</strong> Consulta con tu médico, pero suele ser posible tras 1-2 semanas si el trabajo no requiere esfuerzo físico.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Contacto de emergencia -->
+    <div class="card mb-4">
+      <div class="card-header bg-danger text-white">
+        <i class="bi bi-telephone-fill"></i> Contacto de Emergencia
+      </div>
+      <div class="card-body">
+        <p>Ante cualquier duda o síntoma de alarma, comunícate con tu médico o acude al servicio de urgencias más cercano.</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  function resaltarFila(checkbox, guardar = true) {
+    const fila = checkbox.closest('tr');
+    if (checkbox.checked) {
+      fila.classList.add('resaltado-dia');
+    } else {
+      fila.classList.remove('resaltado-dia');
+    }
+    if (guardar) {
+      guardarChecklist();
+    }
+  }
+
+  function guardarChecklist() {
+    const checkboxes = document.querySelectorAll('#tabla-dias tbody input[type="checkbox"]');
+    const estados = Array.from(checkboxes).map(cb => cb.checked);
+    localStorage.setItem('diasChecklist', JSON.stringify(estados));
+  }
+
+  function restaurarChecklist() {
+    const estados = JSON.parse(localStorage.getItem('diasChecklist') || '[]');
+    const checkboxes = document.querySelectorAll('#tabla-dias tbody input[type="checkbox"]');
+    checkboxes.forEach((cb, i) => {
+      if (estados[i]) {
+        cb.checked = true;
+        resaltarFila(cb, false);
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', restaurarChecklist);
+  </script>
+</body>
+</html> 
