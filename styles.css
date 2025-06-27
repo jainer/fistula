@@ -1,0 +1,63 @@
+/* Colores modernos y suaves */
+body {
+  background: #f4f6fb;
+}
+
+.card-header.bg-success {
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%) !important;
+}
+
+.card-header.bg-secondary {
+  background: linear-gradient(90deg, #868f96 0%, #596164 100%) !important;
+}
+
+.card-header.bg-danger {
+  background: linear-gradient(90deg, #ff5858 0%, #f09819 100%) !important;
+}
+
+.navbar.bg-primary {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.alert-info {
+  background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: #185a9d;
+  border: none;
+  border-radius: 1rem;
+}
+
+h5 {
+  margin-top: 1rem;
+  color: #185a9d;
+}
+
+ul {
+  margin-bottom: 0.5rem;
+}
+
+.resaltado-dia,
+.resaltado-dia td,
+.resaltado-dia th {
+  background-color: #7CFC98 !important;
+  transition: background 0.3s;
+}
+
+table#tabla-dias tr.resaltado-dia,
+table#tabla-dias tr.resaltado-dia td,
+table#tabla-dias tr.resaltado-dia th {
+  background-color: #39e75f !important; /* Verde neón */
+  border: 2px solid #1b8c2c !important;
+  transition: background 0.3s, border 0.3s;
+}
+
+table#tabla-dias tr.resaltado-dia > td,
+table#tabla-dias tr.resaltado-dia > th {
+  background-color: #39e75f !important;
+  border: 2px solid #1b8c2c !important;
+  transition: background 0.3s, border 0.3s;
+} 
